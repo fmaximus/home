@@ -1,0 +1,5 @@
+#!/bin/bash
+FORTUNE_DIR=~/fortunes
+for file in `ls $FORTUNE_DIR | grep -v '\.dat'`; do 
+    strfile $FORTUNE_DIR/$file
+done
