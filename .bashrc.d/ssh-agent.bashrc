@@ -8,8 +8,9 @@ if [ -f ~/.ssh/agent ]; then
   fi
 fi
 
-if [[ RUNNING == 0 ]]; then
+if [[ $RUNNING == 0 ]]; then
   ssh-agent > ~/.ssh/agent
+  . ~/.ssh/agent
   ssh-add
 fi
 
