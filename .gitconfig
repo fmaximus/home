@@ -1,0 +1,13 @@
+[core]
+	autocrlf = input
+[user]
+	name = Frank Maximus
+	email = frank@healingjourneyman.com
+[merge]
+	tool = kdiff3
+[alias]
+	ps = -p status
+	co = checkout
+	ri = rebase --interactive
+	rl = reflog
+	cp = cherry-pick
