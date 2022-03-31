@@ -11,3 +11,5 @@
 	ri = rebase --interactive
 	rl = reflog
 	cp = cherry-pick
+[init]
+	defaultBranch = main
