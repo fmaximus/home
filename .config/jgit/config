@@ -1,0 +1,9 @@
+[filesystem "Ubuntu|11.0.14|/dev/sdb"]
+	timestampResolution = 9000 nanoseconds
+	minRacyThreshold = 18050 microseconds
+[filesystem "Private Build|17.0.2|/dev/sdb"]
+	timestampResolution = 6700 nanoseconds
+	minRacyThreshold = 18048 microseconds
+[filesystem "Private Build|17.0.2|D:\\"]
+	timestampResolution = 576 milliseconds
+	minRacyThreshold = 0 nanoseconds
