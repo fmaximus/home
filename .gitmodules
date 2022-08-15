@@ -1,0 +1,6 @@
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule ".omzsh-custom/themes/powerlevel10k"]
+	path = .omzsh-custom/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git

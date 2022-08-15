@@ -1,0 +1,14 @@
+*
+
+!.bashrc.d/*
+!.ssh/config
+!bin/*
+!.config/*
+
+!.bashrc
+!.gitconfig
+!.gitignore
+!.screenrc
+!.zshrc
+!.oh-my-zsh
+!.omzsh-custom/*
