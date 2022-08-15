@@ -3,7 +3,7 @@
 !.bashrc.d/*
 !.ssh/config
 !bin/*
-!.config/*
+!.config/
 
 !.bashrc
 !.gitconfig
