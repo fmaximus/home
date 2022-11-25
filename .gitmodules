@@ -4,3 +4,6 @@
 [submodule ".omzsh-custom/themes/powerlevel10k"]
 	path = .omzsh-custom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule ".omzsh-custom/plugins/wakatime"]
+	path = .omzsh-custom/plugins/wakatime
+	url = https://github.com/sobolevn/wakatime-zsh-plugin.git
