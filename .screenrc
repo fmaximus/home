@@ -1,5 +1,5 @@
 startup_message off
-termcapinfo rxvt-unicode ti@:te@     #enable SHIFT-PGUP / SHIFT-PGDOWN scroll
+termcapinfo xterm|xterms|xs|rxvt|rxvt-unicode ti@:te@     #enable SHIFT-PGUP / SHIFT-PGDOWN scroll
 terminfo rxvt-unicode ti@:te@:
 term screen-256color
 setenv LC_CTYPE en_US.UTF-8
@@ -21,20 +21,26 @@ bind _ resize max
 bindkey ^[[1;5D prev  # change window with ctrl-left
 bindkey ^[[1;5C next  # change window with ctrl-right
 
-chdir /data/git/cloudstack
-screen -t cloudmonkey            0 cloudmonkey
-setenv MAVEN_OPTS "-Xmx512m -XX:MaxPermSize=500m -Xdebug -Xrunjdwp:transport=dt_socket,address=5005,server=y,suspend=n" 
-screen -t cloadstack-dev         1 
-unsetenv MAVEN_OPTS
-screen -t cloadstack-test        2
-stuff "activate"
-chdir /data/git/nuage-cloudstack-plugin/nuage-vsp-acs/
-screen -t nuage-vsp-acs          3
-chdir /data/git/noc-heat-templates
-screen -t noc-heat               4
-chdir /data/git/nuagify
-screen -t nuagify                5
-stuff "activate nuagify^M"
+chdir /home/fmaximus/finadvice/finadvise-server
+#setenv MAVEN_OPTS "-Xmx512m -XX:MaxPermSize=500m -Xdebug -Xrunjdwp:transport=dt_socket,address=5005,server=y,suspend=n"
+screen -t server                 0 # command to run
+#unsetenv MAVEN_OPTS
+
+chdir /home/fmaximus/finadvice/ui
+screen -t ui-advisor             1
+
+chdir /home/fmaximus/finadvice/ui
+screen -t ui-client              2
+#stuff "nvm use --lts^M"
+
+chdir /home/fmaximus/finadvice/ui/packages/lib-model
+screen -t ui-model               3
+
+chdir /home/fmaximus/finadvice/ui/packages/lib-calculator
+screen -t ui-calculator          4
+
+chdir /home/fmaximus/finadvice/ui/packages/advisor/plugin/outlook
+screen -t outlook-add-in       5
 
 hardstatus on
 caption always "%?%{ Wk}%-Lw%?%{Rk}%n*%f %t%?(%u)%?%?%{Wk}%+Lw%? %{Rk}%=%c %{rk}%d/%M/%Y"

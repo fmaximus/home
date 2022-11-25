@@ -2,7 +2,7 @@
 	autocrlf = input
 [user]
 	name = Frank Maximus
-	email = frank@healingjourneyman.com
+	email = frank.maximus@vanadys.com
 [merge]
 	tool = kdiff3
 [alias]
@@ -11,6 +11,8 @@
 	ri = rebase --interactive
 	rl = reflog
 	cp = cherry-pick
+	rmorig = !git status --porcelain | grep .orig | cut -c4- | xargs rm
+	#change-commits = "!f() { VAR1=$1; VAR='$'$1; OLD=$2; NEW=$3; shift 3; git filter-branch  --env-filter \"if [ \\\"${VAR}\\\" = '$OLD' ]; then export $VAR1='$NEW';echo 'to $NEW'; fi\" $@; };  f
 [init]
 	defaultBranch = main
 [mergetool]
